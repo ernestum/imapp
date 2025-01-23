@@ -66,7 +66,7 @@ bool CreateTexture(unsigned char* pixels, int width, int height, ImTextureID* ou
 
     if (out_texture_id != NULL)
     {
-        *out_texture_id = reinterpret_cast<ImTextureID>(image_texture);
+        *out_texture_id = (ImTextureID)(intptr_t)image_texture;
     }
 
     return true;

@@ -5,7 +5,7 @@
 #include "imapp_internal.h"
 
 #include "imgui.h"
-#include "imgui_impl_sdl.h"
+#include "imgui_impl_sdl2.h"
 
 #ifdef IMAPP_RENDERER_OPENGL
 #include "imapp_opengl_loader.h"
@@ -141,7 +141,7 @@ void CleanupPlatform()
 
 void BeginFramePlatform()
 {
-    ImGui_ImplSDL2_NewFrame(window);
+    ImGui_ImplSDL2_NewFrame();
 }
 
 void EndFramePlatform()
